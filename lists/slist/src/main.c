@@ -17,7 +17,7 @@ int main(void)
   for(i=1;i<DEFAULT_LIST_LEN;i++)
   {
     // initialise node
-    list[i].data = i;
+    list[i].data = (void*)i;
     list[i].next = NULL;
     
     insertAfter(&list[i-1], &list[i]);

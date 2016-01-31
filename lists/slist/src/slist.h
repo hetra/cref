@@ -3,7 +3,7 @@
 
 struct Node
 {
-  int data;
+  void* data;
   struct Node* next;
 };
 
@@ -71,7 +71,7 @@ int traverseForward(struct Node* target_node)
   
   for(ptr=target_node;ptr!=NULL;ptr=ptr->next)
   {
-    printf("%d ", ptr->data);
+    printf("%d ", (int)(ptr->data));
   }
   
   printf("\n");
