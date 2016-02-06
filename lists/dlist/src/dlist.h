@@ -1,6 +1,9 @@
 #ifndef DLIST_H_
 #define DLIST_H_
 
+#include <stdio.h>
+#include <stdlib.h>
+
 struct Node
 {
   void* data;
@@ -57,7 +60,7 @@ int insertAfter(struct Node* target_node, struct Node* new_node)
     }
     else
     {
-      return EXIT_FAILURE;
+      new_node->prev = NULL;
     }
   }
   else
